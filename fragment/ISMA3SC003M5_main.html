@@ -1,0 +1,217 @@
+<!-- =========================================================
+     One Cycle Dev. Framework · 본문 (기존 레이아웃의 <main> … </main> 안에 넣는 부분)
+     필요한 것: b.css 다음에 /resources/css/A3/renewal/onecycle.css
+     ========================================================= -->
+<section class="hero oc-hero" id="top">
+  <div class="oc-orbit" aria-hidden="true"><svg viewBox="0 0 400 400" fill="none">
+    <defs><linearGradient id="oc-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5a4f"/><stop offset="1" stop-color="#ff9a6b" stop-opacity="0"/></linearGradient></defs>
+    <circle cx="200" cy="200" r="196" stroke="rgba(255,255,255,.06)"/>
+    <circle cx="200" cy="200" r="150" stroke="rgba(255,255,255,.1)"/>
+    <circle cx="200" cy="200" r="104" stroke="rgba(255,255,255,.07)"/>
+    <g class="spin">
+      <path d="M200 50a150 150 0 0 1 150 150" stroke="url(#oc-g)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="200" cy="50" r="6" fill="#ff5a4f"/>
+      <circle cx="329.9" cy="125" r="4" fill="#7fa6e6"/><circle cx="329.9" cy="275" r="4" fill="#7fa6e6"/>
+      <circle cx="200" cy="350" r="4" fill="#7fa6e6"/><circle cx="70.1" cy="275" r="4" fill="#7fa6e6"/><circle cx="70.1" cy="125" r="4" fill="#7fa6e6"/>
+    </g>
+  </svg></div>
+  <div class="wrap">
+    <span class="kicker">One Cycle Dev. Framework</span>
+    <h1>AI 에이전트 플랫폼,<br>만든 다음이 <em>진짜 시작</em></h1>
+    <p class="lede">진단하고, 고치고, 증명하고, 감시하고, 배웁니다. 보안 컨설팅의 판단 위에 재현 가능한 증거와 상시 감시를 더해, 개발 이후의 안전성과 신뢰성을 확보하는 하나의 순환 구조입니다.</p>
+    <div class="hero-meta">
+      <div><b>31<small>개</small></b><span>자사 프로젝트 전수 형식 검증</span></div>
+      <div><b>15<small>개</small></b><span>Lean 4로 증명한 안전성 속성</span></div>
+      <div><b>26<small>/26</small></b><span>CI 회귀 가드 통과 저장소</span></div>
+      <div><b>24<small>시간</small></b><span>검증 이후의 원격 감시</span></div>
+    </div>
+    <nav class="subnav" id="oc-subnav"><a href="#intro" class="on">개요</a><a href="#cycle">프레임워크</a><a href="#stages">플랫폼 5종</a><a href="#proof">검증 사례</a><a href="#law">AI 기본법</a><a href="#with">컨설팅과 함께</a><a href="#contact">도입 문의</a></nav>
+  </div>
+</section>
+
+<!-- 개요 -->
+<section class="sec"><div class="wrap oc-anchor" id="intro">
+  <div class="intro"><div><span class="kicker">Overview</span><h2>이제 희소한 것은<br>개발이 아니라 <em>검증</em>입니다</h2></div>
+    <div class="prose"><p class="big">코딩 에이전트가 며칠 만에 플랫폼 하나를 완성하는 시대입니다. 남는 질문은 하나입니다. 그렇게 만든 플랫폼은 안전한가, 믿을 수 있는가.</p>
+    <p>여러 에이전트와 비동기 요청, 사람의 승인 절차가 얽힌 AI 에이전트 플랫폼에는 일반 테스트로 잡히지 않는 동시성 결함과 상태 결함이 숨어 있습니다. 공격하는 쪽은 AI 에이전트 기반 도구로 상시·자동으로 움직이고, 정기 점검과 인증 심사 사이에도 코드는 계속 바뀝니다. 그 사이를 메울 상시 검증이 필요합니다.</p>
+    <p>One Cycle Dev. Framework는 개발 → 품질 진단 → 보안 취약점 분석·즉시 수정 → 형식 검증 → 24시간 감시 → 지식 자산화를 하나의 고리로 묶습니다. 각 단계의 산출물은 다음 단계의 입력이 되고, 동시에 감사 증빙이 됩니다.</p>
+    <p>이 체계는 보안 컨설팅을 대신하지 않습니다. 에이쓰리시큐리티가 쌓아 온 컨설팅과 인증 역량 위에서, 컨설턴트의 판단을 뒷받침하는 도구로 쓰입니다.</p></div></div>
+  <div class="oc-shift">
+    <article><div class="ft"><span>진단·재검증을</span><b>며칠 단위로</b></div><p>반복되는 진단·수정·재검증은 에이전트가 수행하고, 판정은 모델 검사기·테스트·git을 다시 실행하는 결정적 검증기가 내립니다.</p></article>
+    <article><div class="ft"><span>보고서에</span><b>증거를 더해</b></div><p>권고가 실제로 이행되었는지를 「수정 전 코드에서 실패하고, 수정 후 통과하며, 패치를 되돌리면 다시 실패한다」로 확인해 함께 납품합니다.</p></article>
+    <article><div class="ft"><span>인증 이후에도</span><b>상시 감시</b></div><p>검증을 마친 플랫폼은 ARGUS가 24시간 원격 감시하고, 경보는 다시 진단·검증 사이클을 호출합니다.</p></article>
+    <article><div class="ft"><span>경험을</span><b>팀의 자산으로</b></div><p>프로젝트마다 얻은 경험은 MYELIN을 거쳐 재사용 가능한 지식이 되어, 다음 프로젝트를 더 빠르게 만듭니다.</p></article>
+  </div>
+</div></section>
+
+<!-- 소개 영상 -->
+<section class="sec soft"><div class="wrap">
+  <div class="sec-h"><div><span class="kicker">Film</span><h2>8분 40초로 보는 One Cycle</h2></div><p>문제의식부터 여섯 단계의 흐름, 자사 검증 결과까지 한 편에 담았습니다. 아래 목차를 누르면 해당 장면으로 이동합니다.</p></div>
+  <div class="oc-video"><video id="oc-film" controls preload="none" playsinline poster="/resources/images/A3/renewal/img/onecycle_poster.jpg"><source src="/resources/video/onecycle_intro.mp4" type="video/mp4">이 브라우저에서는 영상을 재생할 수 없습니다.</video></div>
+  <div class="oc-chapters" aria-label="영상 목차">
+    <button type="button" data-t="16"><time>0:16</time>왜 검증인가</button>
+    <button type="button" data-t="93"><time>1:33</time>전체 흐름</button>
+    <button type="button" data-t="126"><time>2:06</time>LLMOps</button>
+    <button type="button" data-t="149"><time>2:29</time>SSC</button>
+    <button type="button" data-t="181"><time>3:01</time>Proof-Skills</button>
+    <button type="button" data-t="268"><time>4:28</time>ARGUS</button>
+    <button type="button" data-t="296"><time>4:56</time>MYELIN</button>
+    <button type="button" data-t="342"><time>5:42</time>자사 검증 결과</button>
+    <button type="button" data-t="381"><time>6:21</time>AI 기본법</button>
+    <button type="button" data-t="407"><time>6:47</time>컨설팅과 함께</button>
+  </div>
+<script>/* 영상 목차: 누르면 그 시점부터 재생 */(function(){var v=document.getElementById('oc-film');if(!v)return;var bs=document.querySelectorAll('.oc-chapters button');for(var i=0;i<bs.length;i++)bs[i].addEventListener('click',function(){var t=Number(this.getAttribute('data-t'));function go(){v.currentTime=t;v.play()}if(v.readyState>=1)go();else{v.addEventListener('loadedmetadata',go,{once:true});v.load()}})})()</script>
+</div></section>
+
+<!-- 프레임워크: 순환 다이어그램 -->
+<section class="sec dark"><div class="wrap oc-anchor" id="cycle">
+  <div class="sec-h"><div><span class="kicker">Framework</span><h2>여섯 단계가 산출물로<br>이어지는 하나의 고리</h2></div><p>개발된 플랫폼은 진단·분석·검증을 차례로 거치고, 검증을 마치면 감시 아래 서비스되며, 전 과정의 경험은 지식으로 쌓입니다. 단계를 누르면 역할과 산출물을 볼 수 있습니다.</p></div>
+  <div class="oc-cycle">
+    <div>
+      <div class="oc-ring" role="tablist" aria-label="One Cycle 여섯 단계">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <circle class="track" cx="50" cy="50" r="38"/>
+          <g class="chev"><path d="M49.2 10.8 51 12l-1.8 1.2" transform="rotate(30 50 50)"/><path d="M49.2 10.8 51 12l-1.8 1.2" transform="rotate(90 50 50)"/><path d="M49.2 10.8 51 12l-1.8 1.2" transform="rotate(150 50 50)"/><path d="M49.2 10.8 51 12l-1.8 1.2" transform="rotate(210 50 50)"/><path d="M49.2 10.8 51 12l-1.8 1.2" transform="rotate(270 50 50)"/><path d="M49.2 10.8 51 12l-1.8 1.2" transform="rotate(330 50 50)"/></g>
+          <path class="back" d="M28.72 66.63A27 27 0 0 0 75.03 39.88"/>
+          <path class="back-h" d="M73.3 41.6 75.03 39.88 76.9 41.5"/>
+        </svg>
+        <div class="oc-core"><b>ONE CYCLE</b><span>한 단계의 산출물이<br>다음 단계의 입력이자<br>감사 증빙</span></div>
+        <button type="button" role="tab" class="oc-node n1" id="oc-t1" aria-controls="oc-p1"><i>01</i><b>개발</b><span>AI Agent Platform</span></button>
+        <button type="button" role="tab" class="oc-node n2" id="oc-t2" aria-controls="oc-p2"><i>02</i><b>품질 진단</b><span>WDLAB-LLMOps</span></button>
+        <button type="button" role="tab" class="oc-node n3" id="oc-t3" aria-controls="oc-p3"><i>03</i><b>보안 분석·수정</b><span>SSC</span></button>
+        <button type="button" role="tab" class="oc-node n4" id="oc-t4" aria-controls="oc-p4"><i>04</i><b>형식 검증</b><span>Proof-Skills</span></button>
+        <button type="button" role="tab" class="oc-node n5" id="oc-t5" aria-controls="oc-p5"><i>05</i><b>운영 감시</b><span>ARGUS</span></button>
+        <button type="button" role="tab" class="oc-node n6" id="oc-t6" aria-controls="oc-p6"><i>06</i><b>지식 자산화</b><span>MYELIN</span></button>
+      </div>
+      <div class="oc-legend"><span>산출물이 다음 단계로</span><span class="fb">ARGUS 경보가 재진단을 호출</span></div>
+    </div>
+    <div class="oc-panels">
+      <article class="oc-panel" role="tabpanel" id="oc-p1" aria-labelledby="oc-t1"><span class="st">STAGE 01 · 개발</span><h3>AI Agent Platform 개발</h3><p>멀티 에이전트와 Local LLM·Online LLM을 기반으로 플랫폼과 애플리케이션을 개발합니다. 사이클은 여기서 만들어진 빌드에서 출발합니다.</p>
+        <dl><div><dt>대상</dt><dd>고객 프로젝트 또는 A3 Security 자체 프로젝트</dd></div><div><dt>산출물</dt><dd>배포 후보 빌드, 저장소</dd></div><div><dt>다음 단계로</dt><dd>빌드와 실행 기록이 품질 진단의 입력이 됩니다.</dd></div></dl></article>
+      <article class="oc-panel" role="tabpanel" id="oc-p2" aria-labelledby="oc-t2"><span class="st">STAGE 02 · 품질 진단</span><h3>WDLAB-LLMOps</h3><p>에이전트 실행을 5단계로 관측하고 4축 스코어카드로 서비스 품질을 진단합니다.</p>
+        <dl><div><dt>핵심 기능</dt><dd>5단계 실행 모니터, 4축 스코어카드, finding별 trace 딥링크</dd></div><div><dt>산출물</dt><dd>품질 스코어카드, finding 목록</dd></div><div><dt>증빙으로서</dt><dd>모든 finding이 해당 실행 기록으로 연결되어 「왜 그런 판정인가」를 추적할 수 있습니다.</dd></div></dl></article>
+      <article class="oc-panel" role="tabpanel" id="oc-p3" aria-labelledby="oc-t3"><span class="st">STAGE 03 · 보안 분석·즉시 수정</span><h3>SSC · Self Security Consulting</h3><p>셀프 보안 자가진단과 Red Team 취약점 분석을 수행하고, 문제가 되는 사안은 곧바로 수정합니다.</p>
+        <dl><div><dt>핵심 기능</dt><dd>ISO 27001:2022 기반 6단계 자가진단, PTES 8단계 Red Team 취약점 분석</dd></div><div><dt>산출물</dt><dd>취약점 분석 보고서, 개선 이행 내역</dd></div><div><dt>다음 단계로</dt><dd>수정이 유효한지는 형식 검증 단계가 확인합니다.</dd></div></dl></article>
+      <article class="oc-panel" role="tabpanel" id="oc-p4" aria-labelledby="oc-t4"><span class="st">STAGE 04 · 형식 검증</span><h3>WDLAB-Proof-Skills</h3><p>가장 위험한 동시성·상태 문제를 골라 모델 검사를 하고, 반례를 실제 코드에서 재현한 뒤 수정하고 다시 검증합니다.</p>
+        <dl><div><dt>핵심 기능</dt><dd>테스트 → 모델 검사 → 반례 재현 → 원인 분석 → 수정 → 재검증</dd></div><div><dt>산출물</dt><dd>판정이 붙은 Markdown·DOCX 보고서, 패치 브랜치</dd></div><div><dt>원칙</dt><dd>에이전트가 작성하되, 에이전트가 판정하지 않습니다.</dd></div></dl></article>
+      <article class="oc-panel" role="tabpanel" id="oc-p5" aria-labelledby="oc-t5"><span class="st">STAGE 05 · 운영 감시</span><h3>ARGUS</h3><p>100개의 눈을 가진 감시자라는 이름 그대로, 검증을 마친 플랫폼을 24시간 지켜보는 자율형 보안관제센터입니다.</p>
+        <dl><div><dt>핵심 기능</dt><dd>상시 위협 헌팅, 탐지 규칙, 즉시 경보, 자동 대응(SOAR)</dd></div><div><dt>산출물</dt><dd>경보 이력, 대응 타임라인, 월간 리포트</dd></div><div><dt>순환</dt><dd>경보와 운영 데이터가 02·03·04단계의 재진단을 호출합니다.</dd></div></dl></article>
+      <article class="oc-panel" role="tabpanel" id="oc-p6" aria-labelledby="oc-t6"><span class="st">STAGE 06 · 지식 자산화</span><h3>MYELIN + Obsidian</h3><p>프로젝트에서 얻은 경험을 검증된 노트와 Pack으로 바꾸어 다음 프로젝트에 다시 투입합니다.</p>
+        <dl><div><dt>핵심 기능</dt><dd>발견한 버그 유형과 수정 패턴을 검증된 노트로 승격, 재사용할수록 강해지는 연결</dd></div><div><dt>산출물</dt><dd>verified 노트, Domain Pack</dd></div><div><dt>순환</dt><dd>쌓인 지식이 다음 개발과 다음 진단에 반영됩니다.</dd></div></dl></article>
+    </div>
+  </div>
+<script>/* 순환 다이어그램: 단계를 누르면 오른쪽 설명이 바뀐다. 스크립트가 없으면 여섯 설명이 모두 펼쳐져 보인다 */(function(){var box=document.querySelector('.oc-cycle');if(!box)return;var tabs=box.querySelectorAll('.oc-node'),ps=box.querySelectorAll('.oc-panel');box.classList.add('js');
+function sel(i,focus){for(var j=0;j<tabs.length;j++){var on=j===i;tabs[j].classList.toggle('on',on);tabs[j].setAttribute('aria-selected',on);tabs[j].tabIndex=on?0:-1;ps[j].hidden=!on}if(focus)tabs[i].focus()}
+for(var k=0;k<tabs.length;k++)(function(i){tabs[i].addEventListener('click',function(){sel(i)});tabs[i].addEventListener('keydown',function(e){var n=tabs.length,d=(e.key==='ArrowRight'||e.key==='ArrowDown')?1:(e.key==='ArrowLeft'||e.key==='ArrowUp')?-1:0;if(d){e.preventDefault();sel((i+d+n)%n,true)}})})(k);
+sel(0)})()</script>
+</div></section>
+
+<!-- 플랫폼 5종 -->
+<section class="sec"><div class="wrap oc-anchor" id="stages">
+  <div class="sec-h"><div><span class="kicker">Platforms</span><h2>고리를 이루는<br>다섯 개의 플랫폼</h2></div><p>모든 플랫폼은 온프레미스와 로컬 LLM 구성을 지원합니다. 망분리 환경에서도 고객의 코드와 자산 정보가 밖으로 나가지 않습니다.</p></div>
+  <div class="rf">
+    <article class="lead"><span class="oc-no">04 · 형식 검증 — 프레임워크의 핵심</span><h3>WDLAB-Proof-Skills</h3>
+      <p>프로젝트 이름과 폴더만 등록하면 전 과정이 자동으로 실행됩니다. 모델·재현 테스트·패치는 코딩 에이전트가 만들지만, 모든 관문은 TLC 모델 검사기와 테스트 스위트, git을 직접 다시 실행하는 결정적 검증기가 판정합니다. AI가 스스로 잘했다고 말하는 것을 믿는 구조가 아닙니다.</p>
+      <ul><li>테스트 실행</li><li>동시성·상태 문제 모델 검사</li><li>반례의 실제 코드 재현</li><li>근본 원인 분석</li><li>최소 패치와 재검증</li><li>Markdown·DOCX 보고서</li></ul></article>
+    <article><span class="oc-no">02 · 품질 진단</span><h3>WDLAB-LLMOps</h3><p>AI·에이전트 서비스의 품질을 진단하고, 판정의 근거를 실행 기록으로 남깁니다.</p>
+      <ul><li>5단계 실행 관측</li><li>4축 품질 스코어카드</li><li>finding별 trace 딥링크</li><li>모의 결과에는 SIMULATED 표시</li></ul></article>
+    <article><span class="oc-no">03 · 보안 분석·수정</span><h3>SSC</h3><p>14종의 전문 에이전트가 갭 분석과 Red Team 취약점 분석을 수행합니다.</p>
+      <ul><li>ISO 27001:2022 Annex A 93개 통제항목</li><li>PTES 절차의 취약점 분석</li><li>단계마다 사람의 승인(HITL)</li><li>발견 사안의 즉시 수정·개선</li></ul></article>
+    <article><span class="oc-no">05 · 운영 감시</span><h3>ARGUS</h3><p>검증 시점의 안전을 운영 기간의 안전으로 이어 주는 자율형 SOC입니다.</p>
+      <ul><li>Supervisor 1 + 전문 에이전트 9</li><li>28개 탐지 규칙 · 33개 MITRE 기법</li><li>메신저 즉시 경보</li><li>자동 대응(SOAR)</li></ul></article>
+    <article><span class="oc-no">06 · 지식 자산화</span><h3>MYELIN</h3><p>Obsidian과 Claude 기반의 개인 지식 운영체계. 쓸수록 빨라지는 지식 신경망입니다.</p>
+      <ul><li>발견을 검증된 노트로 승격</li><li>재사용할수록 강해지는 연결</li><li>보안 컨설팅·침해 대응 Domain Pack</li><li>Vault는 개인 소유, 공유는 본인 선택</li></ul></article>
+  </div>
+</div></section>
+
+<!-- 원칙과 보고서 -->
+<section class="sec soft"><div class="wrap">
+  <div class="oc-principle"><div><span class="kicker">Principle</span><p class="quote">에이전트가 작성하되,<br>에이전트가 <em>판정하지 않는다</em></p></div>
+    <div class="prose"><p class="big">보고서는 여섯 가지 질문에 주장이 아니라 근거로 답합니다.</p>
+    <p>판정에는 등급이 붙고, 검사하지 않은 후보도 보고서에 그대로 나열됩니다. 「검증됨」은 결함이 없다는 뜻이 아니라, 지정한 관심사에 대해 명시된 경계 안에서 반례가 없다는 뜻입니다. 이 정직한 범위 표기가 감사와 규제 대응에서 신뢰의 근거가 됩니다.</p></div></div>
+  <div class="oc-tw"><table class="oc-table"><thead><tr><th scope="col">보고서가 답하는 질문</th><th scope="col">근거</th></tr></thead><tbody>
+    <tr><th scope="row">무엇이 틀렸나</th><td>모델 검사 반례가 위반한 속성</td></tr>
+    <tr><th scope="row">실제 버그인가</th><td>수정 전 코드에서 실패하는 결정적 재현 테스트</td></tr>
+    <tr><th scope="row">왜 틀렸나</th><td>계층·버그 클래스·메커니즘·발생 조건·위치, 기존 테스트가 놓친 이유</td></tr>
+    <tr><th scope="row">무엇을 고쳤나</th><td>감사를 통과한 최소 패치 (API 변경·테스트 무력화 없음)</td></tr>
+    <tr><th scope="row">수정이 유효한가</th><td>재현 테스트 통과, 회귀 없음, 모델 재검사, 패치를 되돌리면 다시 실패</td></tr>
+    <tr><th scope="row">보증 범위는</th><td>경계(상태 수·깊이), 신뢰 기반, 결함을 가릴 수 있는 추상화</td></tr>
+  </tbody></table></div>
+  <div class="oc-grades" aria-label="판정 등급"><span>FIXED</span><span>CONFIRMED</span><span>SUSPECTED</span><span>BOUNDED-PASS</span><span>PROVEN</span><span>UNVERIFIED</span><em>판정은 여섯 등급으로 표기합니다.</em></div>
+</div></section>
+
+<!-- 검증 사례 -->
+<section class="sec dark"><div class="wrap oc-anchor" id="proof">
+  <div class="sec-h"><div><span class="kicker">Proof</span><h2>구상이 아니라,<br>먼저 직접 써 본 체계</h2></div><p>고객에게 제안하기 전에 자체 프로젝트에 먼저 적용했습니다. 아래는 2026년 10~11월 수행 결과입니다.</p></div>
+  <div class="stats">
+    <div><b>31<small>개</small></b><span>프로젝트 전수 형식 검증 (TLA+/TLC)</span></div>
+    <div><b>6<small>개</small></b><span>우선순위 프로젝트 Lean 4 승격</span></div>
+    <div><b>15<small>개</small></b><span>모든 크기에 대해 증명한 안전성 속성</span></div>
+    <div><b>26<small>/26</small></b><span>PR·push·야간 재검증 회귀 가드 통과</span></div>
+  </div>
+  <div class="oc-case">
+    <article><span class="st">CASE · SSC 승인 게이트</span><h3>보안 진단 플랫폼 자신에게서 찾은 결함</h3>
+      <p>동시에 들어온 실행 요청 두 건이 이미 승인된 단계를 되돌려, 이후 승인이 영구히 막히는 경합 결함이 SSC에서 발견되었습니다. 테스트까지 마친 플랫폼에도 이런 결함은 남아 있고, 이 프레임워크가 그것을 찾아 고친다는 뜻입니다.</p>
+      <div class="res"><b>FIXED</b><span>실행 재진입 가드로 수정하고, 재현 테스트를 저장소에 함께 남겼습니다.</span></div></article>
+    <article><span class="st">EVIDENCE · 납품되는 증거</span>
+      <ol class="oc-chain">
+        <li><b>수정 전 코드에서 실패한다</b><span>모델 검사 반례를 실제 코드의 재현 테스트로 옮깁니다.</span></li>
+        <li><b>수정 후에는 통과한다</b><span>회귀가 없고, 모델을 다시 검사해도 반례가 없습니다.</span></li>
+        <li><b>패치를 되돌리면 다시 실패한다</b><span>통과의 원인이 그 수정임을 확인합니다.</span></li>
+      </ol></article>
+  </div>
+</div></section>
+
+<!-- AI 기본법 -->
+<section class="sec"><div class="wrap oc-anchor" id="law">
+  <div class="sec-h"><div><span class="kicker">Compliance</span><h2>증빙이 개발 과정의<br>부산물로 쌓입니다</h2></div><p>AI 기본법은 안전성·신뢰성 확보 조치를 말이 아니라 기록으로 입증하도록 요구합니다. 각 단계의 산출물은 그 증빙으로 그대로 쓰입니다.</p></div>
+  <div class="oc-tw"><table class="oc-table"><thead><tr><th scope="col">법상 요구 (요지)</th><th scope="col">대응 단계</th><th scope="col">제공 증빙</th></tr></thead><tbody>
+    <tr><th scope="row">위험의 식별·평가·완화</th><td><span class="st">03 SSC</span> <span class="st">04 Proof-Skills</span></td><td>취약점 분석 보고서, 모델 검사 반례와 수정·재검증 기록</td></tr>
+    <tr><th scope="row">위험관리 방안의 수립·운영</th><td><span class="st">02~04 전 단계</span></td><td>단계별 Gate 승인 기록, 개선 이행 내역</td></tr>
+    <tr><th scope="row">설명 방안 (결과 도출 근거)</th><td><span class="st">02 LLMOps</span></td><td>trace 딥링크가 연결된 finding, 스코어카드</td></tr>
+    <tr><th scope="row">사람의 관리·감독</th><td><span class="st">03 SSC</span> <span class="st">04 Proof-Skills</span></td><td>HITL 승인 게이트 이력, 사람 결정 대기 항목 목록</td></tr>
+    <tr><th scope="row">안전사고 모니터링·대응 체계</th><td><span class="st">05 ARGUS</span></td><td>경보 이력, 대응 타임라인, 월간 관제 리포트</td></tr>
+    <tr><th scope="row">문서의 작성·보관</th><td><span class="st">전 단계 + 06 MYELIN</span></td><td>일자·버전이 붙은 MD·DOCX 보고서, git 이력, CI 재검증 로그</td></tr>
+  </tbody></table></div>
+  <p class="oc-note">조문 해석과 고객별 고영향 AI 해당 여부는 법무 검토를 거쳐 확정합니다.</p>
+</div></section>
+
+<!-- 컨설팅과 함께 -->
+<section class="sec soft"><div class="wrap oc-anchor" id="with">
+  <div class="oc-with"><span class="kicker">With Consulting</span>
+    <p class="quote">컨설팅이 필요 없어지는 것이 아닙니다.<br>컨설턴트의 판단과 고객의 신뢰 위에<br><em>자동화된 순환 체계를 얹습니다.</em></p>
+    <p class="lede">에이쓰리시큐리티의 중심은 지금도 보안 컨설팅과 인증입니다. One Cycle은 그 일을 대신하지 않습니다. 같은 컨설턴트가 더 많은 고객에게, 더 깊은 검증을, 더 자주 제공할 수 있게 하는 체계입니다.</p></div>
+  <div class="oc-tw"><table class="oc-table"><thead><tr><th scope="col">구분</th><th scope="col">보안 컨설팅·인증 — 바탕</th><th scope="col" class="hl">One Cycle — 그 위에 더하는 것</th></tr></thead><tbody>
+    <tr><th scope="row">판단</th><td>컨설턴트가 위험을 해석하고 우선순위와 개선 방향을 정합니다.</td><td class="hl">진단·재현·재검증의 반복 작업을 에이전트와 검증기가 맡아, 컨설턴트가 판단에 집중합니다.</td></tr>
+    <tr><th scope="row">범위</th><td>관리체계·정책·조직과 인증 심사 대응</td><td class="hl">AI 에이전트 서비스의 코드와 동작 수준 검증 (동시성·상태 결함의 모델 검사)</td></tr>
+    <tr><th scope="row">주기</th><td>정기 점검과 인증 심사</td><td class="hl">코드가 바뀔 때마다 재검증, 점검 사이에는 ARGUS 24시간 감시</td></tr>
+    <tr><th scope="row">산출물</th><td>진단 보고서, 개선 권고, 인증</td><td class="hl">권고의 이행을 확인하는 재현 테스트·패치·재검증 기록</td></tr>
+    <tr><th scope="row">지식</th><td>컨설턴트의 경험과 노하우</td><td class="hl">MYELIN으로 축적해 다음 프로젝트에 재사용</td></tr>
+    <tr><th scope="row">규제 대응</th><td>ISMS·ISO 27001 등 인증 체계</td><td class="hl">AI 기본법 증빙 매핑 추가</td></tr>
+  </tbody></table></div>
+  <p class="oc-note">기존 컨설팅 계약에 「AI 에이전트 서비스 검증」을 더하는 방식으로 도입할 수 있습니다.</p>
+</div></section>
+
+<!-- 도입 방식 -->
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><div><span class="kicker">Engagement</span><h2>진단으로 시작해<br>상시 체계로 넓힙니다</h2></div><p>한 번의 진단·검증 프로젝트로 시작하고, 필요에 따라 구독과 관제, 연간 계약으로 범위를 넓힐 수 있습니다.</p></div>
+  <div class="svc">
+    <article><span class="n">01 · 진단·검증 프로젝트</span><h3>먼저 한 번 돌려 봅니다</h3><ul><li>One-Cycle Assessment — 품질 진단 + 보안 취약점 분석·수정 + 형식 검증</li><li>Proof-Skills 검증 — 관심사 1~3개 형식 검증 + 보고서 + 패치</li></ul></article>
+    <article><span class="n">02 · 구독·관제</span><h3>코드가 바뀔 때마다 다시</h3><ul><li>LLMOps 구독 — 품질 진단·귀인 분석, 감사 로그와 AI 기본법 매핑</li><li>ARGUS Managed — 24시간 원격 감시 + 즉시 경보 + 월간 리포트</li></ul></article>
+    <article><span class="n">03 · 연간 계약</span><h3>사이클 전체를 상시로</h3><ul><li>One-Cycle Full Suite — 전 단계 + 분기 재진단 + CI 회귀 가드 + 규제 증빙 패키지</li><li>On-Premise License — 금융·공공 망분리 환경 설치형</li></ul></article>
+  </div>
+  <div class="oc-seg">
+    <div><b>보안 컨설팅 고객</b><span>AI 에이전트 서비스를 운영하거나 도입 중이어서 기존 점검 범위에 검증을 더하려는 조직</span></div>
+    <div><b>금융권</b><span>망분리 환경에서 보조·외부 연결 서비스까지 상시 점검이 필요한 조직</span></div>
+    <div><b>공공 · 의료</b><span>AI 기본법에 따라 위험관리와 안전성 증빙을 갖추어야 하는 기관과 사업자</span></div>
+    <div><b>스타트업 · SI</b><span>출시 전 검증 보고서가 투자·납품 심사 자료로 필요한 기업</span></div>
+  </div>
+</div></section>
+
+<!-- 도입 문의 (기존 화면과 같은 부품) -->
+<section class="sec s"><div class="wrap"><div class="cta oc-anchor" id="contact"><div><h2>만든 플랫폼, 믿을 수 있습니까?</h2><p>운영 중이거나 출시를 앞둔 AI 에이전트 서비스에 맞는 진단·검증 범위를 함께 정해 드립니다.</p><div class="actions" style="margin-top:34px"><a class="pill white" href="mailto:hello@a3sc.co.kr">hello@a3sc.co.kr <span class="ar">→</span></a></div></div><div class="num">대표전화<b>02-6952-2511</b></div></div></div></section>
+
+<script>/* 서브 메뉴: 보고 있는 구역을 표시 */(function(){var nav=document.getElementById('oc-subnav');if(!nav||!('IntersectionObserver' in window))return;var as=nav.querySelectorAll('a'),map={};
+for(var i=0;i<as.length;i++){var el=document.getElementById(as[i].getAttribute('href').slice(1));if(el)map[el.id]=as[i]}
+var io=new IntersectionObserver(function(es){for(var i=0;i<es.length;i++)if(es[i].isIntersecting){for(var j=0;j<as.length;j++)as[j].className='';map[es[i].target.id].className='on'}},{rootMargin:'-30% 0px -60% 0px'});
+for(var id in map)io.observe(document.getElementById(id))})()</script>

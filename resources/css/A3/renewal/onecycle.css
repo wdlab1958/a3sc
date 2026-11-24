@@ -1,0 +1,157 @@
+/* =========================================================
+   One Cycle Dev. Framework (ISMA3SC003M5) 페이지 전용 확장
+   - b.css 뒤에 불러온다. b.css 의 변수(--red, --n900 …)와 공통 부품(.hero .sec .rf .svc .stats .cta …)을 그대로 쓴다.
+   - 이 파일의 선택자는 모두 .oc- 로 시작하므로 다른 화면에 영향을 주지 않는다.
+   ========================================================= */
+
+/* 서브 메뉴로 이동했을 때 제목이 화면 위에 붙지 않게 */
+.oc-anchor{scroll-margin-top:48px}
+
+/* ---------- 히어로: 사진 대신 순환 궤도 그래픽 ---------- */
+.oc-hero{background:radial-gradient(120% 90% at 85% 40%,#16254a 0%,var(--n950) 62%)}
+.oc-hero .oc-orbit{position:absolute;z-index:-1;right:-8%;top:46%;width:min(64vw,880px);aspect-ratio:1;transform:translateY(-50%);pointer-events:none}
+.oc-hero .oc-orbit svg{width:100%;height:100%;display:block}
+.oc-hero .oc-orbit .spin{transform-origin:50% 50%;animation:oc-spin 60s linear infinite}
+@keyframes oc-spin{to{transform:rotate(360deg)}}
+.oc-hero .wrap{padding-top:150px}
+.oc-hero .hero-meta{margin-top:0;margin-bottom:8px}
+.oc-hero .hero-meta b small{font-size:.5em;font-weight:600;margin-left:3px;color:#ff8278}
+
+/* ---------- 전환 카드: 수개월 → 며칠 ---------- */
+.oc-shift{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:96px}
+.oc-shift article{border-radius:var(--r-lg);border:1px solid var(--g200);background:#fff;padding:30px 28px 32px}
+.oc-shift .ft{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--g100)}
+.oc-shift .ft span{font-size:16px;color:var(--red);font-weight:600;width:100%}
+.oc-shift b{font-size:28px;color:var(--ink);letter-spacing:-.04em;line-height:1.2}
+.oc-shift p{font-size:15.5px;line-height:1.7;color:var(--g600)}
+
+/* ---------- 소개 영상 ---------- */
+.oc-video{position:relative;border-radius:var(--r-xl);overflow:hidden;background:var(--n950);aspect-ratio:16/9;box-shadow:0 40px 80px -40px rgba(10,18,34,.45)}
+.oc-video video{width:100%;height:100%;display:block;object-fit:cover}
+.oc-chapters{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.oc-chapters button{font:inherit;cursor:pointer;background:#fff;border:1px solid var(--g200);border-radius:999px;padding:8px 16px;font-size:14.5px;color:var(--g600);transition:.2s}
+.oc-chapters button:hover{border-color:var(--ink);color:var(--ink)}
+.oc-chapters time{color:var(--red);font-weight:600;font-variant-numeric:tabular-nums;margin-right:8px}
+
+/* ---------- 순환 다이어그램 ---------- */
+.oc-cycle{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);gap:72px;align-items:center}
+.oc-ring{position:relative;aspect-ratio:1;width:100%}
+.oc-ring svg{position:absolute;inset:0;width:100%;height:100%}
+.oc-ring .track{fill:none;stroke:rgba(255,255,255,.16);stroke-width:.35}
+.oc-ring .chev{fill:none;stroke:rgba(255,255,255,.5);stroke-width:.5;stroke-linecap:round;stroke-linejoin:round}
+.oc-ring .back{fill:none;stroke:#ff6a5f;stroke-width:.45;stroke-dasharray:1.2 1.4;stroke-linecap:round}
+.oc-ring .back-h{fill:none;stroke:#ff6a5f;stroke-width:.5;stroke-linecap:round;stroke-linejoin:round}
+.oc-core{position:absolute;left:50%;top:50%;width:40%;transform:translate(-50%,-50%);text-align:center}
+.oc-core b{display:block;font-size:clamp(17px,2vw,26px);font-weight:800;letter-spacing:.02em;color:#fff;line-height:1.1}
+.oc-core span{display:block;margin-top:10px;font-size:13.5px;line-height:1.55;color:#98a4b8}
+.oc-node{position:absolute;transform:translate(-50%,-50%);width:150px;padding:12px 10px 13px;border-radius:var(--r-md);background:var(--n850);border:1px solid rgba(255,255,255,.14);color:#aeb8ca;font:inherit;text-align:center;cursor:pointer;transition:.2s;display:grid;gap:2px;line-height:1.3}
+.oc-node:hover{border-color:rgba(255,255,255,.45);background:var(--n800)}
+.oc-node:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.oc-node i{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.1em;color:#ff8278;font-variant-numeric:tabular-nums}
+.oc-node b{font-size:16.5px;color:#fff;font-weight:700;letter-spacing:-.02em}
+.oc-node span{font-size:13px;color:#98a4b8}
+.oc-node.on{background:var(--red);border-color:var(--red);box-shadow:0 14px 34px -12px rgba(229,50,43,.7)}
+.oc-node.on i,.oc-node.on span{color:#ffe1de}
+.oc-node.n1{left:50%;top:12%}
+.oc-node.n2{left:82.9%;top:31%}
+.oc-node.n3{left:82.9%;top:69%}
+.oc-node.n4{left:50%;top:88%}
+.oc-node.n5{left:17.1%;top:69%}
+.oc-node.n6{left:17.1%;top:31%}
+.oc-legend{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:28px;font-size:14px;color:#98a4b8}
+.oc-legend span{display:inline-flex;align-items:center;gap:10px}
+.oc-legend span::before{content:'';width:26px;border-top:2px solid rgba(255,255,255,.5)}
+.oc-legend .fb::before{border-top:2px dashed #ff6a5f}
+.oc-panel{border-radius:var(--r-xl);padding:44px 44px 40px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.oc-panel + .oc-panel{margin-top:16px}
+.oc-cycle.js .oc-panel{min-height:470px;margin-top:0}
+.oc-panel .st{font-size:13px;font-weight:600;letter-spacing:.12em;color:#ff8278}
+.oc-panel h3{font-size:clamp(28px,2.6vw,38px);margin:12px 0 14px;letter-spacing:-.045em}
+.oc-panel > p{font-size:17px;color:#b6c0d1}
+.oc-panel dl{margin-top:30px;border-top:1px solid rgba(255,255,255,.12)}
+.oc-panel dl div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.oc-panel dt{font-size:13.5px;font-weight:600;color:#7f8ea8;letter-spacing:.04em;padding-top:2px}
+.oc-panel dd{font-size:16px;color:#dfe5ee;line-height:1.65}
+
+/* ---------- 플랫폼 카드(.rf) 보강 ---------- */
+.oc-no{display:block;font-size:13.5px;font-weight:700;letter-spacing:.06em;color:var(--red);margin-bottom:10px;font-variant-numeric:tabular-nums}
+.rf .lead .oc-no{grid-column:1/-1;color:#ff8278;margin-bottom:-6px}
+
+/* ---------- 원칙 · 표 ---------- */
+.oc-principle{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-bottom:72px}
+.oc-principle > *{min-width:0}
+.oc-principle .quote{margin-top:18px;font-size:clamp(28px,3vw,44px)}
+/* 컨설팅과 함께: 페이지에서 가장 강조하는 문장 */
+.oc-with{max-width:1040px;margin-bottom:64px}
+.oc-with .quote{margin:20px 0 28px}
+.oc-with .lede{max-width:44em;color:var(--g600)}
+.oc-tw{overflow-x:auto;border-radius:var(--r-lg);border:1px solid var(--g200);background:#fff}
+.oc-table{font-size:15.5px;line-height:1.6;min-width:660px}
+.oc-table th,.oc-table td{padding:17px 24px;text-align:left;vertical-align:top;border-bottom:1px solid var(--g200)}
+.oc-table thead th{background:var(--g100);color:var(--ink);font-weight:600;font-size:14px;white-space:nowrap}
+.oc-table tbody th{color:var(--ink);font-weight:600;white-space:nowrap}
+.oc-table tbody tr:last-child > *{border-bottom:0}
+.oc-table thead th.hl{background:var(--red);color:#fff}
+.oc-table td.hl{background:#fff8f7;color:var(--ink);font-weight:600}
+.oc-table .st{display:inline-block;font-size:13px;font-weight:700;color:var(--red);background:var(--red-soft);border-radius:999px;padding:2px 11px;white-space:nowrap}
+.oc-note{margin-top:18px;font-size:14.5px;color:var(--g500);max-width:56em}
+.oc-grades{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:28px}
+.oc-grades span{font-size:13.5px;font-weight:700;letter-spacing:.04em;padding:6px 14px;border-radius:999px;border:1px solid var(--g300);color:var(--ink);background:#fff}
+.oc-grades em{font-style:normal;font-size:14.5px;color:var(--g500);margin-left:8px}
+
+/* ---------- 검증 사례 ---------- */
+.oc-case{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:88px}
+.oc-case article{border-radius:var(--r-xl);padding:44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1)}
+.oc-case .st{font-size:13px;font-weight:600;letter-spacing:.12em;color:#ff8278}
+.oc-case h3{font-size:28px;margin:12px 0 16px}
+.oc-case p{font-size:16.5px;color:#b6c0d1}
+.oc-case .res{display:flex;align-items:baseline;gap:14px;margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);font-size:15px;color:#98a4b8}
+.oc-case .res b{font-size:13px;letter-spacing:.06em;color:#fff;background:var(--red);border-radius:999px;padding:3px 12px;white-space:nowrap}
+.oc-chain{counter-reset:c;display:grid;gap:0;margin-top:6px}
+.oc-chain li{counter-increment:c;position:relative;padding:18px 0 18px 56px;border-bottom:1px solid rgba(255,255,255,.08);font-size:16.5px;color:#dfe5ee}
+.oc-chain li:last-child{border-bottom:0}
+.oc-chain li::before{content:counter(c);position:absolute;left:0;top:16px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:700;color:#ff8278;background:rgba(229,50,43,.18)}
+.oc-chain b{display:block;color:#fff;font-weight:700}
+.oc-chain span{font-size:14.5px;color:#98a4b8}
+
+/* ---------- 도입 대상 ---------- */
+.oc-seg{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:72px;border-top:1px solid var(--ink)}
+.oc-seg div{padding:28px 28px 8px 0}
+.oc-seg div + div{padding-left:28px;border-left:1px solid var(--g200)}
+.oc-seg b{display:block;font-size:19px;color:var(--ink);letter-spacing:-.03em;margin-bottom:8px}
+.oc-seg span{font-size:15px;line-height:1.65;color:var(--g600)}
+
+/* ---------- 반응형 (b.css 와 같은 기준 폭) ---------- */
+@media (max-width:1100px){
+  .oc-shift{grid-template-columns:repeat(2,1fr)}
+  .oc-cycle{grid-template-columns:1fr;gap:48px}
+  .oc-ring{max-width:560px;margin-inline:auto}
+  .oc-cycle.js .oc-panel{min-height:0}
+  .oc-principle{grid-template-columns:1fr;gap:32px}
+  .oc-case{grid-template-columns:1fr}
+  .oc-seg{grid-template-columns:repeat(2,1fr)}
+  .oc-seg div:nth-child(odd){padding-left:0;border-left:0}
+  .oc-seg div:nth-child(n+3){border-top:1px solid var(--g200)}
+}
+@media (max-width:760px){
+  .oc-hero .wrap{padding-top:110px}
+  .oc-hero .oc-orbit{width:130vw;right:-55vw;top:34%;opacity:.45}
+  .oc-shift{grid-template-columns:1fr;margin-top:56px}
+  .oc-video{border-radius:var(--r-lg)}
+  .oc-node{width:102px;padding:9px 4px 10px}
+  .oc-node b{font-size:13.5px}
+  .oc-node span{display:none}
+  .oc-node i{font-size:11px}
+  .oc-core span{display:none}
+  .oc-panel{padding:30px 26px}
+  .oc-panel dl div{grid-template-columns:1fr;gap:4px}
+  .oc-principle{margin-bottom:48px}
+  .oc-table th,.oc-table td{padding:14px 16px}
+  .oc-case{margin-top:56px}
+  .oc-case article{padding:30px 26px}
+  .oc-case h3{font-size:24px}
+  .oc-seg{grid-template-columns:1fr;margin-top:48px}
+  .oc-seg div,.oc-seg div + div{padding:22px 0 18px;border-left:0}
+  .oc-seg div + div{border-top:1px solid var(--g200)}
+}
+@media (prefers-reduced-motion:reduce){.oc-hero .oc-orbit .spin{animation:none}}
