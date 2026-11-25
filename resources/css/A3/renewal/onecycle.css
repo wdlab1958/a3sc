@@ -76,6 +76,13 @@
 /* ---------- 플랫폼 카드(.rf) 보강 ---------- */
 .oc-no{display:block;font-size:13.5px;font-weight:700;letter-spacing:.06em;color:var(--red);margin-bottom:10px;font-variant-numeric:tabular-nums}
 .rf .lead .oc-no{grid-column:1/-1;color:#ff8278;margin-bottom:-6px}
+/* 각 플랫폼 상세 화면으로 가는 「자세히 보기」 */
+.oc-more{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;margin-top:22px;height:44px;padding:0 20px;border-radius:999px;border:1px solid var(--g300);font-size:15px;font-weight:600;color:var(--ink);white-space:nowrap;transition:.2s}
+.oc-more:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.oc-more:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.oc-more .ar{font-size:17px;line-height:1}
+.rf .lead .oc-more{grid-column:1/-1;justify-self:start;margin-top:10px;background:var(--red);border-color:var(--red);color:#fff}
+.rf .lead .oc-more:hover{background:var(--red-d);border-color:var(--red-d)}
 
 /* ---------- 원칙 · 표 ---------- */
 .oc-principle{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;margin-bottom:72px}

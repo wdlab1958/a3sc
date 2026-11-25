@@ -26,6 +26,22 @@
 
 주소 `ISMA3SC003M5.do` 는 제안값입니다. 다른 번호를 쓰면 4번의 링크와 `build_preview.py` 의 `PAGE` 만 바꾸면 됩니다.
 
+## 플랫폼 상세 화면 연결 (2026-11-25)
+
+「고리를 이루는 다섯 개의 플랫폼」 카드마다 「자세히 보기」 버튼(`.oc-more`)이 있고, 각 버튼은 플랫폼 상세 화면으로 갑니다.
+상세 화면은 저장소가 따로 있으며, 같은 `b.css` 위에 공통 확장 `onecycle_product.css`(선택자 `.pd-`)를 씁니다.
+
+| 단계 | 플랫폼 | 운영 주소(제안값) | 검토용 공개 주소 | 저장소 |
+|---|---|---|---|---|
+| 02 품질 진단 | WDLAB-LLMOps | `/a3sc/ISMA3SC003M6.do` | https://wdlab1958.github.io/WDLAB-LLMOps-Webpage/ | [WDLAB-LLMOps-Webpage](https://github.com/wdlab1958/WDLAB-LLMOps-Webpage) |
+| 03 보안 분석·수정 | SSC | `/a3sc/ISMA3SC003M7.do` | https://wdlab1958.github.io/SSC-Platform-Webpage/ | [SSC-Platform-Webpage](https://github.com/wdlab1958/SSC-Platform-Webpage) |
+| 04 형식 검증 | WDLAB-Proof-Skills | `/a3sc/ISMA3SC003M8.do` | https://wdlab1958.github.io/webpage_proof_skills/ | [webpage_proof_skills](https://github.com/wdlab1958/webpage_proof_skills) |
+| 05 운영 감시 | ARGUS | `/a3sc/ISMA3SC003M9.do` | https://wdlab1958.github.io/ARGUS-Webpage/ | [ARGUS-Webpage](https://github.com/wdlab1958/ARGUS-Webpage) |
+| 06 지식 자산화 | MYELIN | `/a3sc/ISMA3SC003M10.do` | https://wdlab1958.github.io/webpage_myelin/ | [webpage_myelin](https://github.com/wdlab1958/webpage_myelin) |
+
+본문(`fragment/`)의 링크는 운영 주소로 적혀 있고, `build_preview.py` 가 `index.html`(GitHub Pages 용)을 만들 때만 `ROUTES` 표에 따라 공개 주소로 바꿉니다.
+운영 화면 번호를 다르게 쓰면 본문의 `.oc-more` 링크 다섯 개와 `ROUTES` 를 함께 바꿉니다.
+
 ## 미리보기
 
     python3 build_preview.py            # 본문을 고친 뒤 ISMA3SC003M5.html 다시 만들기

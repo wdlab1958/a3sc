@@ -15,6 +15,14 @@ CACHE = ROOT / "reference" / "ISMA3SC003M4.html"
 PAGE = "/a3sc/ISMA3SC003M5.do"
 TITLE = "One Cycle Dev. Framework | 에이쓰리시큐리티"
 DESC = "개발·품질 진단·보안 분석·형식 검증·24시간 감시·지식 자산화를 하나의 순환 고리로 묶은 에이쓰리시큐리티의 One Cycle Dev. Framework를 소개합니다."
+# 플랫폼 상세 화면: 운영 주소(제안값) → 검토용 공개 주소(GitHub Pages). index.html 을 만들 때만 쓴다.
+ROUTES = {
+    "/a3sc/ISMA3SC003M6.do": "https://wdlab1958.github.io/WDLAB-LLMOps-Webpage/",
+    "/a3sc/ISMA3SC003M7.do": "https://wdlab1958.github.io/SSC-Platform-Webpage/",
+    "/a3sc/ISMA3SC003M8.do": "https://wdlab1958.github.io/webpage_proof_skills/",
+    "/a3sc/ISMA3SC003M9.do": "https://wdlab1958.github.io/ARGUS-Webpage/",
+    "/a3sc/ISMA3SC003M10.do": "https://wdlab1958.github.io/webpage_myelin/",
+}
 
 
 def source() -> str:
@@ -59,9 +67,11 @@ def main() -> None:
     print("written: ISMA3SC003M5.html", len(html), "bytes")
 
     # GitHub Pages 용 index.html: 하위 경로(/a3sc/)에서 열리므로 자원은 상대 경로로,
-    # 다른 화면 링크는 실제 사이트로 보낸다. 검토용이므로 검색 노출을 막는다.
+    # 플랫폼 상세 화면은 각자의 공개 주소로, 다른 화면 링크는 실제 사이트로 보낸다. 검토용이므로 검색 노출을 막는다.
     pages = html.replace('"/resources/', '"resources/').replace("url(/resources/", "url(resources/")
     pages = pages.replace(f'href="{PAGE}"', 'href="./"')
+    for path, live in ROUTES.items():
+        pages = pages.replace(f'href="{path}"', f'href="{live}"')
     pages = pages.replace('href="/a3sc/', 'href="https://www.a3sc.co.kr/a3sc/')
     pages = re.sub(r'<link rel="canonical"[^>]*>\n?', "", pages)
     pages = must_sub(r'(?<=<meta name="robots" content=")[^"]*', "noindex,nofollow", pages)
