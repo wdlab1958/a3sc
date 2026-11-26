@@ -34,7 +34,7 @@
 | 단계 | 플랫폼 | 운영 주소(제안값) | 검토용 공개 주소 | 저장소 |
 |---|---|---|---|---|
 | 02 품질 진단 | WDLAB-LLMOps | `/a3sc/ISMA3SC003M6.do` | https://wdlab1958.github.io/WDLAB-LLMOps-Webpage/ | [WDLAB-LLMOps-Webpage](https://github.com/wdlab1958/WDLAB-LLMOps-Webpage) |
-| 03 보안 분석·수정 | SSC | `/a3sc/ISMA3SC003M7.do` | https://wdlab1958.github.io/SSC-Platform-Webpage/ | [SSC-Platform-Webpage](https://github.com/wdlab1958/SSC-Platform-Webpage) |
+| 03 보안 분석·개선 이행 관리 | SSC | `/a3sc/ISMA3SC003M7.do` | https://wdlab1958.github.io/SSC-Platform-Webpage/ | [SSC-Platform-Webpage](https://github.com/wdlab1958/SSC-Platform-Webpage) |
 | 04 형식 검증 | WDLAB-Proof-Skills | `/a3sc/ISMA3SC003M8.do` | https://wdlab1958.github.io/webpage_proof_skills/ | [webpage_proof_skills](https://github.com/wdlab1958/webpage_proof_skills) |
 | 05 운영 감시 | ARGUS | `/a3sc/ISMA3SC003M9.do` | https://wdlab1958.github.io/ARGUS-Webpage/ | [ARGUS-Webpage](https://github.com/wdlab1958/ARGUS-Webpage) |
 | 06 지식 자산화 | MYELIN | `/a3sc/ISMA3SC003M10.do` | https://wdlab1958.github.io/webpage_myelin/ | [webpage_myelin](https://github.com/wdlab1958/webpage_myelin) |

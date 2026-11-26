@@ -34,12 +34,12 @@
   <div class="intro"><div><span class="kicker">Overview</span><h2>이제 희소한 것은<br>개발이 아니라 <em>검증</em>입니다</h2></div>
     <div class="prose"><p class="big">코딩 에이전트가 며칠 만에 플랫폼 하나를 완성하는 시대입니다. 남는 질문은 하나입니다. 그렇게 만든 플랫폼은 안전한가, 믿을 수 있는가.</p>
     <p>여러 에이전트와 비동기 요청, 사람의 승인 절차가 얽힌 AI 에이전트 플랫폼에는 일반 테스트로 잡히지 않는 동시성 결함과 상태 결함이 숨어 있습니다. 공격하는 쪽은 AI 에이전트 기반 도구로 상시·자동으로 움직이고, 정기 점검과 인증 심사 사이에도 코드는 계속 바뀝니다. 그 사이를 메울 상시 검증이 필요합니다.</p>
-    <p>One Cycle Dev. Framework는 개발 → 품질 진단 → 보안 취약점 분석·즉시 수정 → 형식 검증 → 24시간 감시 → 지식 자산화를 하나의 고리로 묶습니다. 각 단계의 산출물은 다음 단계의 입력이 되고, 동시에 감사 증빙이 됩니다.</p>
+    <p>One Cycle Dev. Framework는 개발 → 품질 진단 → 보안 분석·개선 이행 관리 → 형식 검증 → 24시간 감시 → 지식 자산화를 하나의 고리로 묶습니다. 각 단계의 산출물은 다음 단계의 입력이 되고, 동시에 감사 증빙이 됩니다.</p>
     <p>이 체계는 보안 컨설팅을 대신하지 않습니다. 에이쓰리시큐리티가 쌓아 온 컨설팅과 인증 역량 위에서, 컨설턴트의 판단을 뒷받침하는 도구로 쓰입니다.</p></div></div>
   <div class="oc-shift">
-    <article><div class="ft"><span>진단·재검증을</span><b>며칠 단위로</b></div><p>반복되는 진단·수정·재검증은 에이전트가 수행하고, 판정은 모델 검사기·테스트·git을 다시 실행하는 결정적 검증기가 내립니다.</p></article>
+    <article><div class="ft"><span>진단·재검증의</span><b>반복 작업을 자동으로</b></div><p>반복되는 진단·재현·재검증 작업은 에이전트가 수행하고, 사람은 속성과 수정안을 검토합니다. 판정은 모델 검사기·테스트·git을 다시 실행하는 결정적 검증기가 내립니다.</p></article>
     <article><div class="ft"><span>보고서에</span><b>증거를 더해</b></div><p>권고가 실제로 이행되었는지를 「수정 전 코드에서 실패하고, 수정 후 통과하며, 패치를 되돌리면 다시 실패한다」로 확인해 함께 납품합니다.</p></article>
-    <article><div class="ft"><span>인증 이후에도</span><b>상시 감시</b></div><p>검증을 마친 플랫폼은 ARGUS가 24시간 원격 감시하고, 경보는 다시 진단·검증 사이클을 호출합니다.</p></article>
+    <article><div class="ft"><span>인증 이후에도</span><b>상시 감시</b></div><p>검증을 마친 플랫폼은 ARGUS가 24시간 원격 감시합니다. 경보가 기준 등급에 이르면 재진단 요청으로 이어지고, 재진단 여부는 담당자가 결정합니다.</p></article>
     <article><div class="ft"><span>경험을</span><b>팀의 자산으로</b></div><p>프로젝트마다 얻은 경험은 MYELIN을 거쳐 재사용 가능한 지식이 되어, 다음 프로젝트를 더 빠르게 만듭니다.</p></article>
   </div>
 </div></section>
@@ -78,24 +78,24 @@
         <div class="oc-core"><b>ONE CYCLE</b><span>한 단계의 산출물이<br>다음 단계의 입력이자<br>감사 증빙</span></div>
         <button type="button" role="tab" class="oc-node n1" id="oc-t1" aria-controls="oc-p1"><i>01</i><b>개발</b><span>AI Agent Platform</span></button>
         <button type="button" role="tab" class="oc-node n2" id="oc-t2" aria-controls="oc-p2"><i>02</i><b>품질 진단</b><span>WDLAB-LLMOps</span></button>
-        <button type="button" role="tab" class="oc-node n3" id="oc-t3" aria-controls="oc-p3"><i>03</i><b>보안 분석·수정</b><span>SSC</span></button>
+        <button type="button" role="tab" class="oc-node n3" id="oc-t3" aria-controls="oc-p3"><i>03</i><b>보안 분석·이행 관리</b><span>SSC</span></button>
         <button type="button" role="tab" class="oc-node n4" id="oc-t4" aria-controls="oc-p4"><i>04</i><b>형식 검증</b><span>Proof-Skills</span></button>
         <button type="button" role="tab" class="oc-node n5" id="oc-t5" aria-controls="oc-p5"><i>05</i><b>운영 감시</b><span>ARGUS</span></button>
         <button type="button" role="tab" class="oc-node n6" id="oc-t6" aria-controls="oc-p6"><i>06</i><b>지식 자산화</b><span>MYELIN</span></button>
       </div>
-      <div class="oc-legend"><span>산출물이 다음 단계로</span><span class="fb">ARGUS 경보가 재진단을 호출</span></div>
+      <div class="oc-legend"><span>산출물이 다음 단계로</span><span class="fb">ARGUS 경보 → 재진단 요청(사람이 결정)</span></div>
     </div>
     <div class="oc-panels">
       <article class="oc-panel" role="tabpanel" id="oc-p1" aria-labelledby="oc-t1"><span class="st">STAGE 01 · 개발</span><h3>AI Agent Platform 개발</h3><p>멀티 에이전트와 Local LLM·Online LLM을 기반으로 플랫폼과 애플리케이션을 개발합니다. 사이클은 여기서 만들어진 빌드에서 출발합니다.</p>
         <dl><div><dt>대상</dt><dd>고객 프로젝트 또는 A3 Security 자체 프로젝트</dd></div><div><dt>산출물</dt><dd>배포 후보 빌드, 저장소</dd></div><div><dt>다음 단계로</dt><dd>빌드와 실행 기록이 품질 진단의 입력이 됩니다.</dd></div></dl></article>
       <article class="oc-panel" role="tabpanel" id="oc-p2" aria-labelledby="oc-t2"><span class="st">STAGE 02 · 품질 진단</span><h3>WDLAB-LLMOps</h3><p>에이전트 실행을 기록으로 남기고, 5단계 자동 진단과 4축 스코어카드로 서비스 품질을 진단합니다.</p>
-        <dl><div><dt>핵심 기능</dt><dd>5단계 실행 모니터, 4축 스코어카드, finding별 trace 딥링크</dd></div><div><dt>산출물</dt><dd>품질 스코어카드, finding 목록</dd></div><div><dt>증빙으로서</dt><dd>모든 finding이 해당 실행 기록으로 연결되어 「왜 그런 판정인가」를 추적할 수 있습니다.</dd></div></dl></article>
-      <article class="oc-panel" role="tabpanel" id="oc-p3" aria-labelledby="oc-t3"><span class="st">STAGE 03 · 보안 분석·즉시 수정</span><h3>SSC · Self Security Consulting</h3><p>셀프 보안 자가진단과 Red Team 취약점 분석을 수행하고, 발견한 사안은 대책 설계와 이행 기록, 재진단으로 이어 갑니다. 실제 조치는 사람이 합니다.</p>
+        <dl><div><dt>핵심 기능</dt><dd>5단계 실행 모니터, 4축 스코어카드, finding별 근거 기록 연결</dd></div><div><dt>산출물</dt><dd>품질 스코어카드, finding 목록</dd></div><div><dt>증빙으로서</dt><dd>모든 finding이 해당 시나리오의 실행 기록으로 연결되어 「왜 그런 판정인가」를 추적할 수 있습니다.</dd></div></dl></article>
+      <article class="oc-panel" role="tabpanel" id="oc-p3" aria-labelledby="oc-t3"><span class="st">STAGE 03 · 보안 분석·개선 이행 관리</span><h3>SSC · Self Security Consulting</h3><p>셀프 보안 자가진단과 Red Team 취약점 분석을 수행하고, 발견한 사안은 대책 설계와 이행 기록, 재진단으로 이어 갑니다. 실제 조치는 사람이 합니다.</p>
         <dl><div><dt>핵심 기능</dt><dd>ISO 27001:2022 기반 6단계 자가진단, PTES 8단계 Red Team 취약점 분석</dd></div><div><dt>산출물</dt><dd>취약점 분석 보고서, 개선 이행 내역</dd></div><div><dt>다음 단계로</dt><dd>수정이 유효한지는 형식 검증 단계가 확인합니다.</dd></div></dl></article>
       <article class="oc-panel" role="tabpanel" id="oc-p4" aria-labelledby="oc-t4"><span class="st">STAGE 04 · 형식 검증</span><h3>WDLAB-Proof-Skills</h3><p>가장 위험한 동시성·상태 문제를 골라 모델 검사를 하고, 반례를 실제 코드에서 재현한 뒤 수정하고 다시 검증합니다.</p>
         <dl><div><dt>핵심 기능</dt><dd>테스트 → 모델 검사 → 반례 재현 → 원인 분석 → 수정 → 재검증</dd></div><div><dt>산출물</dt><dd>판정이 붙은 Markdown·DOCX 보고서, 패치 브랜치</dd></div><div><dt>원칙</dt><dd>에이전트가 작성하되, 에이전트가 판정하지 않습니다.</dd></div></dl></article>
       <article class="oc-panel" role="tabpanel" id="oc-p5" aria-labelledby="oc-t5"><span class="st">STAGE 05 · 운영 감시</span><h3>ARGUS</h3><p>100개의 눈을 가진 감시자라는 이름 그대로, 검증을 마친 플랫폼을 24시간 지켜보는 자율형 보안관제센터입니다.</p>
-        <dl><div><dt>핵심 기능</dt><dd>상시 위협 헌팅, 탐지 규칙, 즉시 경보, 자동 대응(SOAR)</dd></div><div><dt>산출물</dt><dd>경보 이력, 대응 타임라인, 월간 리포트</dd></div><div><dt>순환</dt><dd>경보와 운영 데이터가 02·03·04단계의 재진단을 호출합니다.</dd></div></dl></article>
+        <dl><div><dt>핵심 기능</dt><dd>상시 위협 헌팅, 탐지 규칙, 즉시 경보, 자동 대응(SOAR)</dd></div><div><dt>산출물</dt><dd>경보 이력, 대응 타임라인, 월간 리포트</dd></div><div><dt>순환</dt><dd>경보가 기준 등급에 이르면 02·03·04단계의 재진단 요청서가 만들어지고, 수행 여부는 담당자가 결정합니다.</dd></div></dl></article>
       <article class="oc-panel" role="tabpanel" id="oc-p6" aria-labelledby="oc-t6"><span class="st">STAGE 06 · 지식 자산화</span><h3>MYELIN + Obsidian</h3><p>프로젝트에서 얻은 경험을 검증된 노트와 Pack으로 바꾸어 다음 프로젝트에 다시 투입합니다.</p>
         <dl><div><dt>핵심 기능</dt><dd>발견한 버그 유형과 수정 패턴을 검증된 노트로 승격, 재사용할수록 강해지는 연결</dd></div><div><dt>산출물</dt><dd>verified 노트, Domain Pack</dd></div><div><dt>순환</dt><dd>쌓인 지식이 다음 개발과 다음 진단에 반영됩니다.</dd></div></dl></article>
     </div>
@@ -108,16 +108,16 @@ sel(0)})()</script>
 
 <!-- 플랫폼 5종 -->
 <section class="sec"><div class="wrap oc-anchor" id="stages">
-  <div class="sec-h"><div><span class="kicker">Platforms</span><h2>고리를 이루는<br>다섯 개의 플랫폼</h2></div><p>플랫폼은 고객 환경에 설치해 운영합니다. SSC와 ARGUS는 로컬 LLM으로 동작해 진단·관제 데이터가 밖으로 나가지 않습니다. Proof-Skills의 에이전트 단계는 현재 Claude Code만 지원합니다.</p></div>
+  <div class="sec-h"><div><span class="kicker">Platforms</span><h2>고리를 이루는<br>다섯 개의 플랫폼</h2></div><p>플랫폼은 고객 환경에 설치해 운영합니다. SSC와 ARGUS는 로컬 LLM으로 동작해 진단·관제 데이터가 밖으로 나가지 않습니다. Proof-Skills의 에이전트 단계는 Claude Code를 기본으로 쓰며, 로컬 모델 구성은 검증 단계입니다.</p></div>
   <div class="rf">
     <article class="lead"><span class="oc-no">04 · 형식 검증 — 프레임워크의 핵심</span><h3>WDLAB-Proof-Skills</h3>
       <p>프로젝트 이름과 폴더만 등록하면 전 과정이 자동으로 실행됩니다. 모델·재현 테스트·패치는 코딩 에이전트가 만들지만, 모든 관문은 TLC 모델 검사기와 테스트 스위트, git을 직접 다시 실행하는 결정적 검증기가 판정합니다. AI가 스스로 잘했다고 말하는 것을 믿는 구조가 아닙니다.</p>
       <ul><li>테스트 실행</li><li>동시성·상태 문제 모델 검사</li><li>반례의 실제 코드 재현</li><li>근본 원인 분석</li><li>최소 패치와 재검증</li><li>Markdown·DOCX 보고서</li></ul>
       <a class="oc-more" href="/a3sc/ISMA3SC003M8.do" aria-label="WDLAB-Proof-Skills 자세히 보기">자세히 보기 <span class="ar">→</span></a></article>
     <article><span class="oc-no">02 · 품질 진단</span><h3>WDLAB-LLMOps</h3><p>AI·에이전트 서비스의 품질을 진단하고, 판정의 근거를 실행 기록으로 남깁니다.</p>
-      <ul><li>5단계 자동 진단 흐름</li><li>4축 품질 스코어카드</li><li>finding별 trace 딥링크</li><li>모의 결과에는 SIMULATED 표시</li></ul>
+      <ul><li>5단계 자동 진단 흐름</li><li>4축 품질 스코어카드</li><li>finding별 근거 기록 연결</li><li>모의 결과에는 SIMULATED 표시</li></ul>
       <a class="oc-more" href="/a3sc/ISMA3SC003M6.do" aria-label="WDLAB-LLMOps 자세히 보기">자세히 보기 <span class="ar">→</span></a></article>
-    <article><span class="oc-no">03 · 보안 분석·수정</span><h3>SSC</h3><p>14종의 전문 에이전트가 갭 분석과 Red Team 취약점 분석을 수행합니다.</p>
+    <article><span class="oc-no">03 · 보안 분석·개선 이행 관리</span><h3>SSC</h3><p>14종의 전문 에이전트가 갭 분석과 Red Team 취약점 분석을 수행합니다.</p>
       <ul><li>ISO 27001:2022 Annex A 93개 통제항목</li><li>PTES 절차의 취약점 분석</li><li>단계마다 사람의 승인(HITL)</li><li>대책 설계 → 이행 기록 → 재진단 (조치는 사람이)</li></ul>
       <a class="oc-more" href="/a3sc/ISMA3SC003M7.do" aria-label="SSC 자세히 보기">자세히 보기 <span class="ar">→</span></a></article>
     <article><span class="oc-no">05 · 운영 감시</span><h3>ARGUS</h3><p>검증 시점의 안전을 운영 기간의 안전으로 이어 주는 자율형 SOC입니다.</p>
@@ -173,7 +173,7 @@ sel(0)})()</script>
   <div class="oc-tw"><table class="oc-table"><thead><tr><th scope="col">법상 요구 (요지)</th><th scope="col">대응 단계</th><th scope="col">제공 증빙</th></tr></thead><tbody>
     <tr><th scope="row">위험의 식별·평가·완화</th><td><span class="st">03 SSC</span> <span class="st">04 Proof-Skills</span></td><td>취약점 분석 보고서, 모델 검사 반례와 수정·재검증 기록</td></tr>
     <tr><th scope="row">위험관리 방안의 수립·운영</th><td><span class="st">02~04 전 단계</span></td><td>단계별 Gate 승인 기록, 개선 이행 내역</td></tr>
-    <tr><th scope="row">설명 방안 (결과 도출 근거)</th><td><span class="st">02 LLMOps</span></td><td>trace 딥링크가 연결된 finding, 스코어카드</td></tr>
+    <tr><th scope="row">설명 방안 (결과 도출 근거)</th><td><span class="st">02 LLMOps</span></td><td>근거 기록이 연결된 finding, 스코어카드</td></tr>
     <tr><th scope="row">사람의 관리·감독</th><td><span class="st">03 SSC</span> <span class="st">04 Proof-Skills</span></td><td>HITL 승인 게이트 이력, 사람 결정 대기 항목 목록</td></tr>
     <tr><th scope="row">안전사고 모니터링·대응 체계</th><td><span class="st">05 ARGUS</span></td><td>경보 이력, 대응 타임라인, 월간 관제 리포트</td></tr>
     <tr><th scope="row">문서의 작성·보관</th><td><span class="st">전 단계 + 06 MYELIN</span></td><td>일자·버전이 붙은 MD·DOCX 보고서, git 이력, CI 재검증 로그</td></tr>
@@ -201,9 +201,9 @@ sel(0)})()</script>
 <section class="sec"><div class="wrap">
   <div class="sec-h"><div><span class="kicker">Engagement</span><h2>진단으로 시작해<br>상시 체계로 넓힙니다</h2></div><p>한 번의 진단·검증 프로젝트로 시작하고, 필요에 따라 구독과 관제, 연간 계약으로 범위를 넓힐 수 있습니다.</p></div>
   <div class="svc">
-    <article><span class="n">01 · 진단·검증 프로젝트</span><h3>먼저 한 번 돌려 봅니다</h3><ul><li>One-Cycle Assessment — 품질 진단 + 보안 취약점 분석·수정 + 형식 검증</li><li>Proof-Skills 검증 — 관심사 1~3개 형식 검증 + 보고서 + 패치</li></ul></article>
+    <article><span class="n">01 · 진단·검증 프로젝트</span><h3>먼저 한 번 돌려 봅니다</h3><ul><li>One-Cycle Assessment — 품질 진단 + 보안 분석·개선 이행 관리 + 형식 검증</li><li>Proof-Skills 검증 — 관심사 1~3개 형식 검증 + 보고서 + 패치</li></ul></article>
     <article><span class="n">02 · 구독·관제</span><h3>코드가 바뀔 때마다 다시</h3><ul><li>LLMOps 구독 — 품질 진단·귀인 분석, 감사 로그와 AI 기본법 매핑</li><li>ARGUS Managed — 24시간 원격 감시 + 즉시 경보 + 월간 리포트</li></ul></article>
-    <article><span class="n">03 · 연간 계약</span><h3>사이클 전체를 상시로</h3><ul><li>One-Cycle Full Suite — 전 단계 + 분기 재진단 + CI 회귀 가드 + 규제 증빙 패키지</li><li>On-Premise License — 금융·공공 망분리 환경 설치형</li></ul></article>
+    <article><span class="n">03 · 연간 계약</span><h3>사이클 전체를 상시로</h3><ul><li>One-Cycle Full Suite — 전 단계 + 분기 재진단 + CI 회귀 가드 + 규제 증빙 패키지</li><li>On-Premise License — 금융·공공 망분리 환경 설치형 (형식 검증 단계는 로컬 모델 구성 검증 후 제공)</li></ul></article>
   </div>
   <div class="oc-seg">
     <div><b>보안 컨설팅 고객</b><span>AI 에이전트 서비스를 운영하거나 도입 중이어서 기존 점검 범위에 검증을 더하려는 조직</span></div>
